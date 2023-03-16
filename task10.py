@@ -3,11 +3,21 @@
 # перевернуть, чтобы все монетки были повернуты вверх одной и той же стороной.
 # Выведите минимальное количество монет, которые нужно перевернуть.
 # польз вводит числос ам через фор
+# 1 - орел, 0 - решка
 
-number = int(input('Введите число монеток: '))
-side_1 = 0
-side_2 = 0
 
-for 
-coins_min_num
-print(coins_min_num)
+number_coins = int(input('Введите количество монет: '))
+orel = reshka = 0
+
+for i in range(number_coins):
+    x = int(input('Введите наименования монет 0 или 1, где 1 - это орел, а 0 - это решка: '))
+    if x == 1:
+        orel = orel + 1
+    else:
+        reshka = reshka + 1
+if orel < reshka:
+    print(f'Переверните {orel} монет(ы)')
+elif orel == reshka:
+    print(f'Количество орлов и решек одинокаково, {orel} штук(и)')
+else:
+    print(f'Переверните {reshka} монет')
