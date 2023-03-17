@@ -8,7 +8,7 @@
 
 S = int(input('Введите чему равна сумма двух чисел: '))
 P = int(input('Введите чему равно произведение двух чисел: '))
-for i in range(S):
-    for j in range(P):
-        if S == i + j and P == i * j:
-            print(i, j)
+for x in range(S):
+    for y in range(P):
+        if S == x + y and P == x * y:
+            print(x, y)
