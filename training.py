@@ -22,3 +22,14 @@ b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
 common = set(a).intersection(b)
 print(common)
 
+
+# 3.Дан произвольный список. 
+# Представьте его в обратном порядке.
+my_list = [2, 4, 8]
+print(my_list[::-1])
+
+# другое решение:
+my_list = [2, 4, 8]
+my_list.reverse()
+print(my_list)
+

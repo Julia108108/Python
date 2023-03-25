@@ -4,10 +4,18 @@
 # Input: [1, 2, 3, 4, 5] k = 3
 # Output: [4, 5, 1, 2, 3]
 # Примечание: Пользователь может вводить значения списка или список задан изначально.
-
+"""
 list_1 = [1, 2, 3, 4, 5]
-k = 3
+k = 6 % len(list_1)
 
-for i in range(len(list_1)):
-    list_1 = list_1[:3] + k
-    print(list_1, end=' ')
+for i in range(k):
+    num = list_1.pop(-1)
+    list_1.insert(0, num)
+print(list_1)
+"""
+# Решение 2
+n = [1, 2, 3, 4, 5]
+k = 5 % len(n)
+
+new_list = n[k:] + n[:k]
+print(new_list)

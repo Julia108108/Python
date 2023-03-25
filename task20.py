@@ -27,3 +27,26 @@ for i in word:
         if i in v:
             summ += k
 print(f"Стоимость слова: {summ}")
+
+# Решение 2
+eng = 'qwertyuiopasdfghjklzxcvbnm'
+rus = 'йцукенгшщзхъфывапролджэячсмитьбю'
+eng_words = {1:'AEIOULNSTR', 2:'DG', 3:'BCMP', 4:'FHVWY', 5:'K', 8:'JX', 10:'QZ'}
+ru_words = {1:'АВЕИНОРСТ', 2:'ДКЛМПУ', 3:'БГЁЬЯ', 4:'ЙЫ', 5:'ЖЗХЦЧ', 8:'ШЭЮ', 10:'ФЩЪ'} 
+text = input('Введите слово: ').upper()
+
+if text[0].lower() in eng:
+    result = 0  # счетчик для слова
+    for i in text: # мы в тексте перебираем каждую букву i
+        for k, v in eng_words.items(): #  в словаре переибраем все пары (ключ k (ст-ть) и значение v). v - это буквы, которые стоят эту ст-ть.
+            if i in v: # проверяет входит ли буква в этот набор букв из какой-то ст-ти ( в список)
+                result += k # если она входит, то нам нужно посомртить на этот список букв, на его ст-ть. А это переменная k. И прибавить ее к result. И так для каждой буквы
+    print(result)
+else:
+    result = 0
+    for i in text:
+        for k, v in ru_words.items():
+            if i in v: 
+                result += k
+    print(result)
+    
